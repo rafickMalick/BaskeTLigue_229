@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BasketLigue229 - Le futur du basketball béninois</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#1A237E',secondary:'#FF6D00'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Montserrat', sans-serif;
+}
+.hero-section {
+background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://readdy.ai/api/search-image?query=A%20basketball%20court%20in%20a%20neighborhood%20in%20Benin%2C%20Africa.%20The%20court%20is%20surrounded%20by%20local%20buildings%20and%20has%20a%20rustic%2C%20authentic%20feel.%20Young%20players%20are%20practicing%20on%20the%20court.%20The%20image%20has%20warm%20lighting%20with%20golden%20hour%20sunlight%2C%20creating%20long%20shadows.%20The%20scene%20captures%20the%20passion%20for%20basketball%20in%20local%20communities.&width=1920&height=1080&seq=hero1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.testimonial-card {
+transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+transform: translateY(-10px);
+}
+.feature-card {
+transition: all 0.3s ease;
+}
+.feature-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.scroll-indicator {
+animation: bounce 2s infinite;
+}
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+transform: translateY(0);
+}
+40% {
+transform: translateY(-10px);
+}
+60% {
+transform: translateY(-5px);
+}
+}
+.cta-button {
+transition: all 0.3s ease;
+}
+.cta-button:hover {
+transform: scale(1.05);
+}
+.timeline-dot {
+transition: all 0.3s ease;
+}
+.timeline-dot:hover {
+transform: scale(1.2);
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #1A237E;
+}
+.custom-checkbox {
+display: none;
+}
+.custom-checkbox-label {
+position: relative;
+padding-left: 30px;
+cursor: pointer;
+}
+.custom-checkbox-label:before {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+width: 20px;
+height: 20px;
+border: 2px solid #1A237E;
+border-radius: 4px;
+background-color: white;
+}
+.custom-checkbox:checked + .custom-checkbox-label:before {
+background-color: #1A237E;
+}
+.custom-checkbox:checked + .custom-checkbox-label:after {
+content: '\2713';
+position: absolute;
+left: 5px;
+top: -1px;
+color: white;
+font-size: 14px;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav class="fixed w-full bg-white bg-opacity-95 shadow-sm z-50">
+<div class="container mx-auto px-6 py-3 flex justify-between items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">BasketLigue229</a>
+<div class="hidden md:flex space-x-8">
+<a href="#why" class="text-gray-700 hover:text-primary font-medium transition-colors">Pourquoi</a>
+<a href="#testimonials" class="text-gray-700 hover:text-primary font-medium transition-colors">Témoignages</a>
+<a href="#features" class="text-gray-700 hover:text-primary font-medium transition-colors">Fonctionnalités</a>
+<a href="#vision" class="text-gray-700 hover:text-primary font-medium transition-colors">Vision</a>
+<a href="#join" class="text-gray-700 hover:text-primary font-medium transition-colors">Rejoindre</a>
+</div>
+<div class="md:hidden flex items-center">
+<button id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-white w-full">
+<div class="container mx-auto px-6 py-3 flex flex-col space-y-4">
+<a href="#why" class="text-gray-700 hover:text-primary font-medium transition-colors">Pourquoi</a>
+<a href="#testimonials" class="text-gray-700 hover:text-primary font-medium transition-colors">Témoignages</a>
+<a href="#features" class="text-gray-700 hover:text-primary font-medium transition-colors">Fonctionnalités</a>
+<a href="#vision" class="text-gray-700 hover:text-primary font-medium transition-colors">Vision</a>
+<a href="#join" class="text-gray-700 hover:text-primary font-medium transition-colors">Rejoindre</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section min-h-screen flex items-center text-white pt-16">
+<div class="container mx-auto px-6 py-24 w-full">
+<div class="max-w-3xl mx-auto text-center">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">BasketLigue229 – Le futur du basketball béninois commence ici</h1>
+<p class="text-xl md:text-2xl mb-10">Connecter les talents, organiser les tournois, révéler les légendes de demain</p>
+<a href="#join" class="cta-button inline-block bg-secondary text-white font-bold py-4 px-8 !rounded-button text-lg shadow-lg whitespace-nowrap">Rejoindre le mouvement</a>
+</div>
+<div class="flex justify-center mt-20">
+<div class="scroll-indicator w-8 h-12 border-2 border-white !rounded-full flex justify-center">
+<div class="w-1.5 h-3 bg-white !rounded-full mt-2"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Section -->
+<section id="why" class="py-24 bg-gradient-to-b from-white to-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-20">
+<span class="inline-block text-secondary font-semibold mb-4">Notre mission</span>
+<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Pourquoi BasketLigue229 ?</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">Le basketball béninois regorge de talents, mais manque cruellement d'infrastructures et d'outils pour les révéler.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="bg-white p-10 rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.08)] transform hover:-translate-y-1 transition-transform duration-300">
+<div class="w-20 h-20 bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-2xl flex items-center justify-center mb-8 mx-auto">
+<i class="ri-line-chart-line ri-2x text-secondary"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Manque de données</h3>
+<p class="text-gray-600 text-center leading-relaxed">Absence de statistiques fiables et de suivi des performances des joueurs locaux, rendant difficile leur valorisation.</p>
+</div>
+<div class="bg-white p-10 rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.08)] transform hover:-translate-y-1 transition-transform duration-300">
+<div class="w-20 h-20 bg-gradient-to-br from-secondary/10 to-secondary/5 rounded-2xl flex items-center justify-center mb-8 mx-auto">
+<i class="ri-building-line ri-2x text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-4">Structures insuffisantes</h3>
+<p class="text-gray-600">Peu d'organisations pour encadrer les tournois et compétitions, limitant les opportunités de développement des talents.</p>
+</div>
+<div class="bg-white p-8 rounded-xl border border-gray-100">
+<div class="w-16 h-16 bg-[#FFF3E8] rounded-xl flex items-center justify-center mb-6">
+<i class="ri-team-line ri-2x text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-4">Talents inexploités</h3>
+<p class="text-gray-600">Des joueurs exceptionnels restent dans l'ombre faute de visibilité et de connexions avec les recruteurs nationaux et internationaux.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-24 bg-gradient-to-b from-gray-50 to-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-20">
+<span class="inline-block text-secondary font-semibold mb-4">Témoignages</span>
+<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Ils croient en notre vision</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">Des acteurs majeurs du basketball africain soutiennent notre initiative.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="testimonial-card bg-white p-10 rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.08)] transform hover:-translate-y-1 transition-transform duration-300">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20African%20female%20basketball%20player%20in%20her%2020s%20with%20an%20athletic%20build%2C%20wearing%20casual%20clothes%2C%20smiling%20confidently%20at%20the%20camera.%20The%20image%20has%20a%20clean%2C%20professional%20look%20with%20soft%20lighting%20against%20a%20neutral%20background.&width=200&height=200&seq=test1&orientation=squarish" alt="Joueuse professionnelle" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-900">Nadège Agonkpo</h4>
+<p class="text-sm text-secondary font-medium">Joueuse Professionnelle</p>
+</div>
+</div>
+<p class="text-gray-600 italic">"J'aurais tellement aimé avoir un outil comme BasketLigue229 quand j'ai commencé ma carrière. Cela aurait accéléré mon parcours et m'aurait donné plus de visibilité auprès des recruteurs internationaux."</p>
+</div>
+<div class="testimonial-card bg-gray-50 p-8 rounded-lg">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=African%20male%20basketball%20coach%20in%20his%2040s%20with%20a%20serious%2C%20experienced%20expression.%20He%20is%20wearing%20a%20polo%20shirt%20with%20a%20whistle%20around%20his%20neck.%20The%20image%20has%20a%20professional%20quality%20with%20good%20lighting%20against%20a%20simple%20background.&width=200&height=200&seq=test2&orientation=squarish" alt="Coach" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-900">Pascal Adjahoungbétin</h4>
+<p class="text-sm text-secondary font-medium">Coach National</p>
+</div>
+</div>
+<p class="text-gray-600 italic">"C'est exactement ce qu'il nous fallait pour structurer notre approche du développement des jeunes talents. Avec BasketLigue229, nous pourrons enfin suivre la progression de chaque joueur et organiser des compétitions cohérentes."</p>
+</div>
+<div class="testimonial-card bg-gray-50 p-8 rounded-lg">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=Former%20NBA%20player%20of%20African%20descent%20in%20his%2050s%2C%20dressed%20in%20business%20casual%20attire.%20He%20has%20a%20distinguished%20appearance%20with%20a%20confident%20smile.%20The%20image%20has%20professional%20lighting%20against%20a%20simple%20background.&width=200&height=200&seq=test3&orientation=squarish" alt="Ancien NBA" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="text-lg font-bold text-gray-900">Mathieu Kérékou</h4>
+<p class="text-sm text-secondary font-medium">Ancien joueur NBA</p>
+</div>
+</div>
+<p class="text-gray-600 italic">"Enfin une plateforme qui met en lumière nos talents locaux ! J'ai dû quitter le Bénin très jeune pour être repéré. Avec BasketLigue229, nos jeunes pourront se faire remarquer tout en restant près de leurs racines."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section id="features" class="py-24 bg-gradient-to-b from-white to-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-20">
+<span class="inline-block text-secondary font-semibold mb-4">Fonctionnalités</span>
+<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Fonctionnalités innovantes</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">Une plateforme complète pour tous les acteurs du basketball béninois.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="feature-card bg-white p-10 rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.08)] transform hover:-translate-y-1 transition-transform duration-300">
+<div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+<i class="ri-trophy-line ri-2x text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Tournois numériques</h3>
+<p class="text-gray-600 text-center">Création, gestion et suivi des tournois en temps réel avec classements automatisés et statistiques détaillées.</p>
+<div class="mt-6 text-center">
+<a href="#" class="text-primary font-medium hover:underline">En savoir plus</a>
+</div>
+</div>
+<div class="feature-card bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+<i class="ri-user-star-line ri-2x text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Fiches joueurs</h3>
+<p class="text-gray-600 text-center">Profils détaillés avec statistiques, vidéos de performances et historique de progression pour chaque athlète.</p>
+<div class="mt-6 text-center">
+<a href="#" class="text-primary font-medium hover:underline">En savoir plus</a>
+</div>
+</div>
+<div class="feature-card bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+<i class="ri-search-eye-line ri-2x text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Mode scouting</h3>
+<p class="text-gray-600 text-center">Interface dédiée aux recruteurs pour découvrir les talents émergents avec filtres avancés et notifications personnalisées.</p>
+<div class="mt-6 text-center">
+<a href="#" class="text-primary font-medium hover:underline">En savoir plus</a>
+</div>
+</div>
+<div class="feature-card bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+<i class="ri-video-line ri-2x text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Archivage vidéo</h3>
+<p class="text-gray-600 text-center">Bibliothèque de moments forts, matchs complets et séquences d'entraînement accessibles à tous les utilisateurs.</p>
+<div class="mt-6 text-center">
+<a href="#" class="text-primary font-medium hover:underline">En savoir plus</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision Section -->
+<section id="vision" class="py-24 bg-gradient-to-b from-gray-50 to-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-20">
+<span class="inline-block text-secondary font-semibold mb-4">Vision</span>
+<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Notre vision d'expansion</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">Du Bénin vers l'Afrique et au-delà, nous construisons l'avenir du basketball africain.</p>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-10">
+<div class="w-full md:w-1/2">
+<div class="relative h-[400px] rounded-lg overflow-hidden">
+<div style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png');" class="absolute inset-0 bg-center bg-cover"></div>
+<div class="absolute inset-0 bg-primary bg-opacity-10"></div>
+<!-- Map Points -->
+<div class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+<div class="timeline-dot w-6 h-6 bg-secondary rounded-full shadow-lg"></div>
+<div class="absolute top-8 left-1/2 transform -translate-x-1/2 bg-white px-3 py-1 rounded shadow-md whitespace-nowrap">
+<span class="text-sm font-medium">Cotonou - 2025</span>
+</div>
+</div>
+<div class="absolute top-1/3 left-1/3 transform -translate-x-1/2 -translate-y-1/2">
+<div class="timeline-dot w-6 h-6 bg-primary rounded-full shadow-lg"></div>
+<div class="absolute top-8 left-1/2 transform -translate-x-1/2 bg-white px-3 py-1 rounded shadow-md whitespace-nowrap">
+<span class="text-sm font-medium">Porto-Novo - 2026</span>
+</div>
+</div>
+<div class="absolute top-1/2 left-2/3 transform -translate-x-1/2 -translate-y-1/2">
+<div class="timeline-dot w-6 h-6 bg-gray-400 rounded-full shadow-lg"></div>
+<div class="absolute top-8 left-1/2 transform -translate-x-1/2 bg-white px-3 py-1 rounded shadow-md whitespace-nowrap">
+<span class="text-sm font-medium">Afrique de l'Ouest - 2027</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<div class="space-y-6">
+<div class="border-l-4 border-primary pl-6">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Phase 1: Bénin (2025-2026)</h3>
+<p class="text-gray-600">Déploiement dans les principales villes du Bénin avec partenariat FBBB (Fédération Béninoise de Basket-Ball) pour intégrer tous les clubs officiels.</p>
+</div>
+<div class="border-l-4 border-secondary pl-6">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Phase 2: Afrique de l'Ouest (2027)</h3>
+<p class="text-gray-600">Expansion dans les pays francophones voisins et création d'un réseau régional de talents avec tournois transfrontaliers.</p>
+</div>
+<div class="border-l-4 border-gray-300 pl-6">
+<h3 class="text-xl font-bold text-gray-900 mb-2">Phase 3: Partenariats internationaux (2028)</h3>
+<p class="text-gray-600">Collaboration avec BAL (Basketball Africa League) et NBA Africa pour créer des ponts vers les ligues professionnelles.</p>
+</div>
+</div>
+<div class="flex items-center space-x-8 mt-10">
+<img src="https://readdy.ai/api/search-image?query=Minimalist%20logo%20design%20for%20a%20basketball%20federation%20with%20blue%20and%20white%20colors%2C%20clean%20lines%2C%20professional%20appearance&width=100&height=60&seq=logo1&orientation=landscape" alt="FBBB" class="h-12">
+<img src="https://readdy.ai/api/search-image?query=Minimalist%20logo%20design%20for%20Basketball%20Africa%20League%20%28BAL%29%20with%20orange%20and%20black%20colors%2C%20modern%20professional%20look&width=100&height=60&seq=logo2&orientation=landscape" alt="BAL" class="h-12">
+<img src="https://readdy.ai/api/search-image?query=Minimalist%20logo%20design%20for%20NBA%20Africa%20with%20red%20and%20blue%20colors%2C%20clean%20professional%20appearance&width=100&height=60&seq=logo3&orientation=landscape" alt="NBA Africa" class="h-12"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Join Section -->
+<section id="join" class="py-24 bg-gradient-to-b from-white to-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-20">
+<span class="inline-block text-secondary font-semibold mb-4">Rejoignez-nous</span>
+<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Rejoignez l'aventure</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">Chacun a un rôle à jouer dans la révolution du basketball béninois.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+<div class="bg-white p-10 rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.08)] transform hover:-translate-y-1 transition-transform duration-300">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+<i class="ri-basketball-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Joueurs</h3>
+<p class="text-gray-600 text-center mb-6">Créez votre profil, partagez vos performances et rejoignez des tournois officiels pour vous faire remarquer.</p>
+<div class="text-center">
+<button class="cta-button bg-primary text-white font-bold py-3 px-6 !rounded-button shadow-md whitespace-nowrap">Créer mon profil</button>
+</div>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+<i class="ri-search-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Recruteurs</h3>
+<p class="text-gray-600 text-center mb-6">Accédez à notre base de données de talents, filtrez selon vos critères et contactez directement les joueurs.</p>
+<div class="text-center">
+<button class="cta-button bg-primary text-white font-bold py-3 px-6 !rounded-button shadow-md whitespace-nowrap">Découvrir les talents</button>
+</div>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto">
+<i class="ri-hand-heart-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Mentors & Sponsors</h3>
+<p class="text-gray-600 text-center mb-6">Soutenez la prochaine génération de talents béninois en partageant votre expérience ou en finançant leur développement.</p>
+<div class="text-center">
+<button class="cta-button bg-primary text-white font-bold py-3 px-6 !rounded-button shadow-md whitespace-nowrap">Devenir partenaire</button>
+</div>
+</div>
+</div>
+<div class="max-w-2xl mx-auto bg-white p-12 rounded-2xl shadow-[0_15px_35px_-5px_rgba(0,0,0,0.08)]">
+<h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Contactez-nous</h3>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+<input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Votre nom">
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+<input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary" placeholder="votre@email.com">
+</div>
+</div>
+<div>
+<label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
+<select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary pr-8 appearance-none bg-white">
+<option value="">Sélectionnez un sujet</option>
+<option value="player">Je suis joueur</option>
+<option value="coach">Je suis coach</option>
+<option value="scout">Je suis recruteur</option>
+<option value="sponsor">Je souhaite devenir sponsor</option>
+<option value="other">Autre</option>
+</select>
+</div>
+<div>
+<label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+<textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Votre message..."></textarea>
+</div>
+<div class="flex items-center">
+<input type="checkbox" id="consent" class="custom-checkbox">
+<label for="consent" class="custom-checkbox-label text-sm text-gray-600">J'accepte de recevoir des informations sur BasketLigue229</label>
+</div>
+<div class="text-center">
+<button type="submit" class="cta-button bg-secondary text-white font-bold py-3 px-8 !rounded-button shadow-md whitespace-nowrap">Envoyer le message</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+<div class="col-span-1 md:col-span-1">
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">BasketLigue229</a>
+<p class="text-gray-400 mt-4">Connecter les talents, organiser les tournois, révéler les légendes de demain.</p>
+<div class="flex space-x-4 mt-6">
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-facebook-fill ri-lg text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-instagram-line ri-lg text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-twitter-x-line ri-lg text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-youtube-line ri-lg text-white"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Liens rapides</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
+<li><a href="#why" class="text-gray-400 hover:text-white transition-colors">Pourquoi</a></li>
+<li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Témoignages</a></li>
+<li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Fonctionnalités</a></li>
+<li><a href="#vision" class="text-gray-400 hover:text-white transition-colors">Vision</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Contact</h4>
+<ul class="space-y-2">
+<li class="flex items-center">
+<i class="ri-map-pin-line ri-lg mr-2 text-secondary"></i>
+<span class="text-gray-400">Cotonou, Bénin</span>
+</li>
+<li class="flex items-center">
+<i class="ri-mail-line ri-lg mr-2 text-secondary"></i>
+<a href="mailto:contact@basketligue229.com" class="text-gray-400 hover:text-white transition-colors">contact@basketligue229.com</a>
+</li>
+<li class="flex items-center">
+<i class="ri-phone-line ri-lg mr-2 text-secondary"></i>
+<a href="tel:+22964273390" class="text-gray-400 hover:text-white transition-colors">+229 67 12 34 56</a>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Newsletter</h4>
+<p class="text-gray-400 mb-4">Restez informé des dernières actualités et événements.</p>
+<form class="flex">
+<input type="email" placeholder="Votre email" class="px-4 py-2 w-full rounded-l border-none focus:outline-none text-gray-900">
+<button type="submit" class="bg-secondary text-white px-4 py-2 rounded-r !rounded-button whitespace-nowrap">S'abonner</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm">© 2025 BasketLigue229. Tous droits réservés.</p>
+<p class="text-gray-400 text-sm mt-2 md:mt-0"><span class="text-secondary">Par des jeunes passionnés béninois</span> pour l'avenir du basketball africain</p>
+</div>
+<div class="mt-6 flex justify-center space-x-6">
+<i class="ri-visa-line ri-2x text-gray-500"></i>
+<i class="ri-mastercard-line ri-2x text-gray-500"></i>
+<i class="ri-paypal-line ri-2x text-gray-500"></i>
+<i class="ri-bank-line ri-2x text-gray-500"></i>
+</div>
+</div>
+</footer>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+} else {
+mobileMenuButton.innerHTML = '<i class="ri-close-line ri-lg"></i>';
+}
+});
+// Close mobile menu when clicking on a link
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+});
+});
+});
+</script>
+<script id="smooth-scroll-script">
+document.addEventListener('DOMContentLoaded', function() {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+<script id="form-validation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const contactForm = document.querySelector('form');
+if (contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+// Simple validation
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const subject = document.getElementById('subject');
+const message = document.getElementById('message');
+let isValid = true;
+if (!name.value.trim()) {
+name.classList.add('border-red-500');
+isValid = false;
+} else {
+name.classList.remove('border-red-500');
+}
+if (!email.value.trim() || !email.value.includes('@')) {
+email.classList.add('border-red-500');
+isValid = false;
+} else {
+email.classList.remove('border-red-500');
+}
+if (!subject.value) {
+subject.classList.add('border-red-500');
+isValid = false;
+} else {
+subject.classList.remove('border-red-500');
+}
+if (!message.value.trim()) {
+message.classList.add('border-red-500');
+isValid = false;
+} else {
+message.classList.remove('border-red-500');
+}
+if (isValid) {
+// Here you would normally send the form data to your server
+alert('Merci pour votre message ! Nous vous contacterons bientôt.');
+contactForm.reset();
+}
+});
+}
+});
+</script>
+<script id="custom-select-script">
+document.addEventListener('DOMContentLoaded', function() {
+const selectElements = document.querySelectorAll('select');
+selectElements.forEach(select => {
+select.addEventListener('focus', function() {
+this.classList.add('ring-2', 'ring-primary', 'border-primary');
+});
+select.addEventListener('blur', function() {
+this.classList.remove('ring-2', 'ring-primary', 'border-primary');
+});
+});
+});
+</script>
+</body>
+</html>
